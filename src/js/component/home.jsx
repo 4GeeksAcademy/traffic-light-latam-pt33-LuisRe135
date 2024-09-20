@@ -10,15 +10,15 @@ const Home = () => {
 	const [color, setColor] = useState("")
 
 	return (
-		<div className="text-center bg-black flex-column" style={{maxWidth: "8em", height: "20em"}}>
-
-			<div className={"rounded-circle m-auto mt-2 clickedLight-"+color}  style={{width: "5em", height:"5em", backgroundColor: 'red'}}>
+		<div className="text-center bg-black flex-column pt-3" style={{maxWidth: "8em", height: "20em"}}>
+			 
+			<div className={"rounded-circle m-auto mt-2 "+ (color =="red" ? "clickedLight-red" : "") } onClick={() =>{setColor("red")}} style={{width: "5em", height:"5em", backgroundColor: 'red'}}>
             
 			</div>
-			<div className={"rounded-circle m-auto mt-2 clickedLight-"+color}  style={{width: "5em", height:"5em", backgroundColor: 'yellow'}}>
+			<div className={"rounded-circle m-auto mt-2 "+ (color =="yellow" ? "clickedLight-yellow" : "") } onClick={() =>{setColor("yellow")}} style={{width: "5em", height:"5em", backgroundColor: 'yellow'}}>
             
 			</div>
-			<button className={"rounded-circle m-auto mt-2 clickedLight-"+color}  onMouseEnter={() =>{(console.log('green'))}} style={{width: "5em", height:"5em", backgroundColor: 'green'}}>
+			<button className={"rounded-circle m-auto mt-2 "+ (color =="green" ? "clickedLight-green" : "") }  onClick={() =>{setColor("green")}} style={{width: "5em", height:"5em", backgroundColor: 'green'}}>
             
 			</button>
 		
